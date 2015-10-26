@@ -41,6 +41,38 @@
             <artifactId>org.apache.karaf.util</artifactId>
             <version>${karaf.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>static</artifactId>
+            <version>${karaf.version}</version>
+            <type>kar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>standard</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>enterprise</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>spring</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

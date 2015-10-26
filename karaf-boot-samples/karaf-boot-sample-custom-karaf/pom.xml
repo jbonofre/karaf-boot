@@ -22,18 +22,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.karaf.boot</groupId>
-    <artifactId>karaf-boot-sample-service-provider-ds</artifactId>
+    <artifactId>karaf-boot-sample-custom-karaf</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.boot</groupId>
-            <artifactId>karaf-boot-starter</artifactId>
+            <artifactId>karaf-boot-sample-service-consumer-ds</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.boot</groupId>
-            <artifactId>karaf-boot-starter-ds</artifactId>
+            <artifactId>karaf-boot-sample-service-provider-ds</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
@@ -45,6 +45,14 @@
                 <artifactId>karaf-boot-maven-plugin</artifactId>
                 <version>${project.version}</version>
                 <extensions>true</extensions>
+                <executions>
+                	<execution>
+                		<id>build</id>
+                		<goals>
+                			<goal>assembly</goal>
+                		</goals>
+                	</execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
