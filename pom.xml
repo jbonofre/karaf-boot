@@ -45,6 +45,7 @@
  
         <!-- Demos -->
         <!-- TODO complete library demos -->
+        <module>karaf-boot-sample-tasklist</module>
     </modules>
 
     <profiles>

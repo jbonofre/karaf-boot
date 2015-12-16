@@ -1,0 +1,8 @@
+Meta-Persistence: \
+    META-INF/persistence.xml
+Export-Package: \
+	org.apache.aries.jpa.example.tasklist.model
+Import-Package: \
+    org.hibernate.proxy, \
+    javassist.util.proxy, \
+    *
