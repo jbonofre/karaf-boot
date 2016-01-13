@@ -70,8 +70,15 @@
                 <module>karaf-boot-samples/karaf-boot-sample-servlet</module>
                 <!-- webui / angular -->
                 <!-- test -->
-                <!-- rest & soap -->
+                <!-- api (for webservices)-->
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-ds-api</module>
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-blueprint-api</module>
+                <!-- rest  -->
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-ds-cxf-rest</module>
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-blueprint-cxf-rest</module>
+                <!-- soap -->
                 <!-- camel -->
+
             </modules>
         </profile>
     </profiles>
