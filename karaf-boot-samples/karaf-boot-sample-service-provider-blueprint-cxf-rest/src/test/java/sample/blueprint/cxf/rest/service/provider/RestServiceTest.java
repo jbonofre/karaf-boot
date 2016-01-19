@@ -11,7 +11,6 @@ import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.karaf.options.LogLevelOption;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
 import org.ops4j.pax.exam.spi.reactors.PerMethod;
-import sample.blueprint.cxf.rest.service.provider.HelloServiceRest;
 
 import javax.inject.Inject;
 import java.io.File;
