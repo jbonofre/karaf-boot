@@ -77,6 +77,8 @@
                 <module>karaf-boot-samples/karaf-boot-sample-service-provider-ds-cxf-rest</module>
                 <module>karaf-boot-samples/karaf-boot-sample-service-provider-blueprint-cxf-rest</module>
                 <!-- soap -->
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-ds-cxf-soap</module>
+                <module>karaf-boot-samples/karaf-boot-sample-service-provider-blueprint-cxf-soap</module>
                 <!-- camel -->
 
             </modules>
