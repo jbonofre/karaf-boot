@@ -29,7 +29,7 @@ To run the sample you should do the following in Apache Karaf prior to install t
 Karaf deploy folder
 * in the Karaf shell console, do:
 
-  bundle:install -s mvn:org.apache.karaf.bootkaraf-boot-sample-service-provider-blueprint-cxf-rest/1.0.0-SNAPSHOT
+  bundle:install -s mvn:org.apache.karaf.boot/karaf-boot-sample-service-provider-blueprint-cxf-rest/1.0.0-SNAPSHOT
 
 
 You can then view the result at:
