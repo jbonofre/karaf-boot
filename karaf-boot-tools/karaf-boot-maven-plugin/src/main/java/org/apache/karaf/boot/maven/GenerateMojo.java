@@ -1,14 +1,15 @@
 package org.apache.karaf.boot.maven;
 
 import org.apache.maven.execution.MavenSession;
+import org.apache.maven.model.Dependency;
 import org.apache.maven.model.Plugin;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.BuildPluginManager;
 import org.apache.maven.plugin.MojoExecution;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugin.descriptor.*;
+import org.apache.maven.plugin.descriptor.MojoDescriptor;
+import org.apache.maven.plugin.descriptor.PluginDescriptor;
 import org.apache.maven.plugins.annotations.*;
-import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.xml.Xpp3Dom;
 import org.codehaus.plexus.util.xml.Xpp3DomBuilder;
@@ -50,6 +51,14 @@ public class GenerateMojo extends AbstractMojo {
             MojoExecution execution = new MojoExecution(karafServicesMojoDescriptor, configuration);
             pluginManager.executeMojo(mavenSession, execution);
 
+            //Check for JPA presence.
+            for (Dependency dependency : mavenProject.getDependencies()) {
+                getLog().info("ArtifactID : " + dependency.getArtifactId());
+                if (dependency.getArtifactId().equals("karaf-boot-core-jpa")) {
+                    new GeneratePersistenceXML(mavenProject, this);
+                }
+            }
+
             // invoke Felix bundle plugin
             getLog().info("Invoking maven-bundle-plugin");
             Plugin felixBundlePlugin = new Plugin();
@@ -84,5 +93,4 @@ public class GenerateMojo extends AbstractMojo {
             throw new MojoExecutionException("karaf-boot-maven-plugin failed", e);
         }
     }
-
 }

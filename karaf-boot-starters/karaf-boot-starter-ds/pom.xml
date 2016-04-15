@@ -36,6 +36,11 @@
             <artifactId>osgi.cmpn</artifactId>
             <version>${osgi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>${osgi.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

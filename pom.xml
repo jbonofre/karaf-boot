@@ -38,6 +38,7 @@
         <!-- Core karaf-boot -->
         <module>karaf-boot-starters</module>
         <module>karaf-boot-tools</module>
+        <module>karaf-boot-core</module>
         <!-- embedded mode -->
 
         <!-- Archetypes -->
@@ -66,6 +67,7 @@
                 <!-- config -->
                 <module>karaf-boot-samples/karaf-boot-sample-config</module>
                 <!-- jpa -->
+                <!--<module>karaf-boot-samples/karaf-boot-sample-jpa</module>-->
                 <!-- servlet -->
                 <module>karaf-boot-samples/karaf-boot-sample-servlet</module>
                 <!-- webui / angular -->
