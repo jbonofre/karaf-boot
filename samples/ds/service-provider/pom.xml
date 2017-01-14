@@ -22,46 +22,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.apache.karaf.boot</groupId>
-    <artifactId>karaf-boot-build</artifactId>
+    <artifactId>karaf-boot-sample-ds-service-provider</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <description>
-        Apache Karaf Boot provides a simple way to create artifacts ready to be deployed in Karaf.
-    </description>
 
-    <properties>
-        <karaf.version>4.0.2</karaf.version>
-        <osgi.version>6.0.0</osgi.version>
-        <pax.cdi.version>1.0.0.RC1</pax.cdi.version>
-    </properties>
-
-    <modules>
-        <!-- Core karaf-boot -->
-        <module>starters</module>
-        <module>tools</module>
-        <!-- embedded mode -->
-
-        <!-- Archetypes -->
-        <!-- TODO archetypes -->
- 
-        <!-- Samples -->
-	<!-- As samples don't use karaf-boot parent pom, they should not be part of the reactor -->
-        <!-- <module>samples</module> -->
-        <!-- TODO complete library demos -->
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.karaf.boot</groupId>
+            <artifactId>karaf-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <inherited>true</inherited>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
+                <groupId>org.apache.karaf.boot</groupId>
+                <artifactId>karaf-boot-maven-plugin</artifactId>
+                <version>${project.version}</version>
+                <extensions>true</extensions>
             </plugin>
         </plugins>
     </build>
 
 </project>
-

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<persistence verson="2.0">
+  <persistence-unit name="test-pu" transaction-type="JTA">
+    <description>Some description</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <jta-data-source>myds</jta-data-source>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+    </properties>
+  </persistence-unit>
+</persistence>
