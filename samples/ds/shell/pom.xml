@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.boot</groupId>
-            <artifactId>karaf-boot-sample-service-provider-ds</artifactId>
+            <artifactId>karaf-boot-sample-ds-service-provider</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
