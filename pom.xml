@@ -104,6 +104,8 @@
                                 <exclude>**/target/**/*</exclude>
                                 <!-- GIT files -->
                                 <exclude>**/.git/**/*</exclude>
+                                <!-- GITHUB files -->
+                                <exclude>**/.github/**/*</exclude>
                                 <!-- IDEA files -->
                                 <exclude>**/.idea/**/*</exclude>
                                 <exclude>**/*.iml</exclude>
