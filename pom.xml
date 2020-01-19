@@ -21,6 +21,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>22</version>
+        <relativePath />
+    </parent>
+
     <groupId>org.apache.karaf.boot</groupId>
     <artifactId>karaf-boot-build</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -62,6 +69,78 @@
     </build>
 
     <profiles>
+        <profile>
+            <id>fastinstall</id>
+            <properties>
+                <maven.test.skip>true</maven.test.skip>
+                <invoker.skip>true</invoker.skip>
+                <archetype.test.skip>true</archetype.test.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>rat</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.rat</groupId>
+                        <artifactId>apache-rat-plugin</artifactId>
+                        <version>0.13</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <reportFile>${project.build.directory}/${project.build.finalName}.rat</reportFile>
+                            <excludeSubProjects>false</excludeSubProjects>
+                            <excludes>
+                                <exclude>**/*.pub</exclude>
+                                <exclude>**/target/**/*</exclude>
+                                <!-- GIT files -->
+                                <exclude>**/.git/**/*</exclude>
+                                <!-- IDEA files -->
+                                <exclude>**/.idea/**/*</exclude>
+                                <exclude>**/*.iml</exclude>
+                                <exclude>**/*.ipr</exclude>
+                                <exclude>**/*.iws</exclude>
+                                <!-- Eclipse files -->
+                                <exclude>**/.*</exclude>
+                                <exclude>**/eclipse-classes/**/*</exclude>
+                                <exclude>**/dependency-reduced-pom.xml</exclude>
+                                <exclude>**/.settings/**</exclude>
+                                <exclude>**/bin/**</exclude>
+                                <!-- resources file -->
+                                <exclude>**/goal.txt</exclude>
+                                <exclude>**/grep.txt</exclude>
+                                <exclude>**/edit.txt</exclude>
+                                <exclude>**/wc.txt</exclude>
+                                <exclude>**/foo</exclude>
+                                <exclude>**/org.ops4j.pax.exam.TestContainerFactory</exclude>
+                                <exclude>**/maven-metadata-local.xml</exclude>
+                                <exclude>**/src/main/java/jline/**/*.java</exclude>
+                                <!-- test manifests -->
+                                <exclude>**/*.mf</exclude>
+                                <!-- test json files -->
+                                <exclude>**/*.json</exclude>
+                                <!-- SSH keys -->
+                                <exclude>**/*.key</exclude>
+                                <exclude>**/*.id_rsa</exclude>
+                                <!-- For Jenkins, ignore the .repository -->
+                                <exclude>.repository/**</exclude>
+                                <!-- jar files -->
+                                <exclude>**/*.jar</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>samples</id>
             <activation>

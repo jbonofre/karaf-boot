@@ -30,7 +30,7 @@
         <module>blueprint</module>
         <module>cdi</module>
         <module>ds</module>
-        <module>jpa</module>
+<!--        <module>jpa</module>-->
         <module>servlet</module>
     </modules>
 
