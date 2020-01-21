@@ -17,23 +17,23 @@
     under the License.
 -->
 
-== karaf-boot-sample-servlet ==
+# karaf-boot-sample-servlet
 
 This sample shows how to easily create a servlet, ready to be deployed in Karaf.
 
-= Design
+## Design
 
 The SampleServlet is servlet containing the @WebServlet annotation.
 
 This servlet is directly deployed by Karaf as soon as it's deployed.
 
-= Build
+## Build
 
 To build, simply do:
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 To deploy in Karaf, you have to enable the web support by installing the http and http-whiteboard features:
 

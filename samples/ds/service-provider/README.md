@@ -17,11 +17,11 @@
     under the License.
 -->
 
-== karaf-boot-sample-ds-service-provider ==
+# karaf-boot-sample-ds-service-provider
 
 Exposes and configures a service using declarative services
 
-= Design
+## Design
 
 The service "contract" is described by the Hello interface. It's a very simple service that expose one operation (hello).
 The service client sends a message (String) to the hello service and he gets a response.
@@ -32,11 +32,11 @@ The HelloServiceImpl is very simple: it prefixes the message with "Hello" and ad
 
 We use the @Component DS annotation on HelloServiceImpl implementation in order to expose the service.
 
-= Build
+## Build
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 We enable DS support and install the example
 

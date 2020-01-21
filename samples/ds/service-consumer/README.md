@@ -17,22 +17,22 @@
     under the License.
 -->
 
-== karaf-boot-sample-ds-service-consumer ==
+# karaf-boot-sample-ds-service-consumer
 
 This sample binds and uses an OSGi service using declarative services (DS).
 
-= Design
+## Design
 
 This artifact uses the hello service.
 
 It uses the DS annotations to create a bean with a reference (@Reference) to the hello service.
 In the HelloServiceClient bean, we use the @Activate annotation to execute a specific method.
 
-= Build
+## Build
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 We need to enable DS support and install the service as well as the consumer
 

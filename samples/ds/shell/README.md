@@ -17,12 +17,12 @@
     under the License.
 -->
 
-== karaf-boot-sample-shell ==
+# karaf-boot-sample-shell
 
 This sample provides new shell command in the Karaf shell console, that uses the hello service, provided by another
 artifact (as karaf-boot-sample-service-provider-ds for instance).
 
-= Design
+## Design
 
 The shell commands are exposed using the Karaf shell annotations.
 
@@ -31,13 +31,13 @@ shell annotations.
 
 The @Reference annotation uses the hello service.
 
-= Build
+## Build
 
 To build, simply do:
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 You have to install a hello service provider first. Please deploy karaf-boot-sample-service-provider-ds first.
 
@@ -49,7 +49,7 @@ Karaf deploy folder
 
   bundle:install -s mvn:org.apache.karaf.boot/karaf-boot-sample-shell/1.0
 
-= Usage
+## Usage
 
 Once deployed, you can use the sample:hello command like:
 

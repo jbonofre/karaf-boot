@@ -17,21 +17,21 @@
     under the License.
 -->
 
-== karaf-boot-sample-jpa ==
+# karaf-boot-sample-jpa
 
 This sample shows how to define a JPA bundle and generate the persistent unit.
 
-= Design
+## Design
 
 A Task entity is defined and annotated with the persistent unit annotations.
 
-= Build
+## Build
 
 To build, simply do:
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 To deploy i:
 

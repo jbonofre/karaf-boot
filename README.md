@@ -17,8 +17,7 @@
     under the License.
 -->
 
-Apache Karaf Boot
-=================
+# Apache Karaf Boot
 
 Karaf Boot provides an easy way to create artifacts ready to be deployed in Karaf, and also possibility to embed, configure, and bootstrap Karaf in a ready to run artifact.
 
@@ -30,8 +29,7 @@ Karaf Boot provides:
 * a Maven plugin processing the annotations to create key turn artifacts
 * an utility start to easily embed, configure, and bootstrap Karaf
 
-Building
---------
+## Building
 
 To build Karaf Boot, just do:
 

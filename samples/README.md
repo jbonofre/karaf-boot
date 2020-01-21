@@ -16,6 +16,9 @@
     specific language governing permissions and limitations
     under the License.
 -->
+
+# Apache Karaf Boot samples
+
 * karaf-boot-sample-service-provider-osgi
    Expose a service using the "native" Karaf OSGi layer (low level)
 * karaf-boot-sample-service-consumer-osgi

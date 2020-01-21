@@ -17,21 +17,21 @@
     under the License.
 -->
 
-== karaf-boot-sample-cdi ==
+# karaf-boot-sample-cdi
 
 This sample shows how to define a CDI bundle.
 
-= Design
+## Design
 
 TODO.
 
-= Build
+## Build
 
 To build, simply do:
 
   mvn clean install
 
-= Deploy
+## Deploy
 
 To deploy i:
 
